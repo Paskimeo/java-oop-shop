@@ -19,7 +19,7 @@ public class Catalogo
 		int iva;
 		
 		//arrey del catalogo
-		Prodotto[] prodotti= new Prodotto[4];
+		Prodotto[] prodotti= new Prodotto[5];
 		
 		//ciclo per chiedere le specifiche dei prodotti
 		
@@ -32,12 +32,12 @@ public class Catalogo
 			nome = scan.nextLine();
 			//Assegnazione valore del prezzo del prodotto.
 			System.out.print("Inserisci il prezzo del " + (i+1) + "° prodotto: ");
-			prezzoBase = scan.nextFloat();
+			prezzoBase = Double.parseDouble(scan.nextLine());
 			//Assegnazione valore dell'iva sul prodotto.
 			System.out.print("Inserisci la percentuale dell'iva sul " + (i+1) + "° prodotto: ");
-			iva = scan.nextInt();
+			iva = Integer.parseInt(scan.nextLine());
 			
-			scan.nextLine();
+		
 			
 			prodotti[i] = new Prodotto(marca, nome, prezzoBase, iva);
 			System.out.println(prodotti[i].descrizioneFinale());
