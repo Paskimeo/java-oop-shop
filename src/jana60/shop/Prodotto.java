@@ -29,7 +29,7 @@ public class Prodotto {
 			 double prezzoTotale() {
 				return prezzoBase + ((prezzoBase / 100) * iva);
 	}
-			String descrizioneFinale( ) {
+			String descrizioneFinale() {
 				return "il prezzo del prodotto: " +nome+ "  di marca: " +marca+ "  è:  " + df.format(prezzoTotale());                       
 			}
 			
