@@ -8,14 +8,14 @@ public class Prodotto {
 	DecimalFormat df= new DecimalFormat("#.00");
 	
 	String marca,nome;
-	float prezzoBase;
+	double prezzoBase;
 	int iva;
 	
 	
 	//costruttori
 	public Prodotto() {}
 	
-	public Prodotto(String marca, String nome, float prezzo, int iva) {
+	public Prodotto(String marca, String nome, double prezzo, int iva) {
 		super();
 		this.marca = marca;
 		this.nome = nome;
@@ -26,11 +26,11 @@ public class Prodotto {
 	
 		}
 	//metodi
-			 float prezzoTotale() {
+			 double prezzoTotale() {
 				return prezzoBase + ((prezzoBase / 100) * iva);
 	}
 			String descrizioneFinale( ) {
-				return "il prezzo del prodotto è: " +nome+ "di marca:" +marca+ "è:" + df.format(prezzoTotale());                       
+				return "il prezzo del prodotto: " +nome+ "  di marca: " +marca+ "  è:  " + df.format(prezzoTotale());                       
 			}
 			
 }
